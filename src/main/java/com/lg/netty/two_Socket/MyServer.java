@@ -1,4 +1,4 @@
-package com.lg.netty.two;
+package com.lg.netty.two_Socket;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

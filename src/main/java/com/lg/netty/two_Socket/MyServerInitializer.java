@@ -1,4 +1,4 @@
-package com.lg.netty.two;
+package com.lg.netty.two_Socket;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -9,12 +9,11 @@ import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 import io.netty.util.CharsetUtil;
 
-
 /**
- * @author liugou  2020/2/3 19:57
+ * @author liugou  2020/2/3 19:19
  * @version 1.0
  */
-public class MyClientInitializer extends ChannelInitializer<SocketChannel> {
+public class MyServerInitializer extends ChannelInitializer<SocketChannel> {
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
 
@@ -30,7 +29,8 @@ public class MyClientInitializer extends ChannelInitializer<SocketChannel> {
 
         channelPipeline.addLast(new StringDecoder(CharsetUtil.UTF_8));//编码
         channelPipeline.addLast(new StringEncoder(CharsetUtil.UTF_8));//解码
-        channelPipeline.addLast(new MyClientHandler());
+        channelPipeline.addLast(new MyServerHandler());
+
 
 
     }

@@ -1,4 +1,4 @@
-package com.lg.netty.two;
+package com.lg.netty.two_Socket;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;

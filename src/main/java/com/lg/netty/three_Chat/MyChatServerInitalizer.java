@@ -1,4 +1,4 @@
-package com.lg.netty.three;
+package com.lg.netty.three_Chat;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
