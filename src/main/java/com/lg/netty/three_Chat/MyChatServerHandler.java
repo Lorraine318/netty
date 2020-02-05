@@ -47,6 +47,8 @@ public class MyChatServerHandler extends SimpleChannelInboundHandler<String> {
 
         final Channel channel = ctx.channel();
         channelGroup.writeAndFlush("【服务器】 -" + channel.remoteAddress() + "断开\n");
+
+        System.out.println(channelGroup.size());
     }
 
 
