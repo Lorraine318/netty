@@ -22,7 +22,7 @@ public class MyChatServerHandler extends SimpleChannelInboundHandler<String> {
 
         channelGroup.forEach(ch->{
             if(ch != channel){
-                ch.writeAndFlush(ch.remoteAddress() + "  发送的消息 : " + msg  +"\n");
+                ch.writeAndFlush(channel.remoteAddress() + "  发送的消息 : " + msg  +"\n");
             }else{
                 ch.writeAndFlush("【自己： 】 " + msg + "\n");
             }
