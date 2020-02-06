@@ -9,7 +9,7 @@ import io.netty.util.concurrent.EventExecutorGroup;
  * @author liugou  2020/2/5 18:01
  * @version 1.0
  */
-public class MyHeartBeatServerHandler extends ChannelInboundHandlerAdapter {
+public class MyHeartBeatServerHandler extends ChannelHandlerAdapter/*ChannelInboundHandlerAdapter*/ {
 
 
     @Override
