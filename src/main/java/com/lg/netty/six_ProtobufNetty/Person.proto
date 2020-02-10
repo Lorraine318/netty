@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.mylg.protobuf;
+
+option optimize_for = SPEED; //SPEED   CODE_SIZE  LITE_RUNTIME      默认speed,可以加快速度
+option java_package = "com.lg.netty.six_ProtobufNetty";
+option java_outer_classname = "DataPersonInfo";
+
+
+message Person {   // 在idea打开命令行：
+                    // D:\ideaWorkspace\netty_lecture\src\main\java\com\lg\netty\six_ProtobufNetty>
+                    //  敲命令： protoc --java_out=D:\ideaWorkspace\netty_lecture\src\main\java  Person.proto
+
+     string name = 1;
+     int32 id = 2;
+     string address = 3;
+
+}
