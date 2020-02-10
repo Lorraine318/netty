@@ -32,7 +32,7 @@ public class ProtoBufClient {
             channelFuture.channel().closeFuture().sync();
 
         }finally {
-            group.close();
+            group.shutdownGracefully();
         }
     }
 

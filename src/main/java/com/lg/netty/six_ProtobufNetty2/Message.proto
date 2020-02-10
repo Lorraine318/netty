@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package com.mylg.protobuf;
+
+option optimize_for = SPEED;
+option java_outer_classname = "MyMessage";
+option java_package = "com.lg.netty.six_ProtobufNetty2";
+
+//D:\ideaWorkspace\netty_lecture\src\main\java\com\lg\netty\six_ProtobufNetty2>
+//protoc --java_out=D:\ideaWorkspace\netty_lecture\src\main\java  ./Message.proto
+message Message {
+
+    enum DataType { //枚举必须从0开始
+                    PresonType = 0;
+                    DogTyPe = 1;
+                    CatType = 2;
+    }
+
+    DataType data_type = 1;
+
+    oneof dataBody { //以下3个 只会出现一个 如果您有一条包含许多字段的消息，并且最多同时设置一个字段，您可以使用其中oneof功能来强制执行此行为并节省内存
+                     Person person = 2;
+                     Dog dog = 3;
+                     Cat cat = 4;
+    }
+
+
+}
+
+
+message Person {
+    string city = 1;
+    string name = 2;
+}
+
+message Dog {
+    string dog_name = 1;
+    int32 dog_age = 2;
+}
+
+
+message Cat {
+    string name = 1;
+    int32 age = 2;
+
+}
+
